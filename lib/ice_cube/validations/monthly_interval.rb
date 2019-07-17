@@ -34,7 +34,8 @@ module IceCube
       end
 
       def build_s(builder)
-        builder.base = interval == 1 ? 'Monthly' : "Every #{interval} months"
+        #Monthly for 4 months, on x.y and Z days of every month
+        builder.base = interval == 1 ? 'Monthly' : "Monthly for #{interval} months"
       end
 
       def build_hash(builder)
